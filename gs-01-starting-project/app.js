@@ -13,17 +13,17 @@
 // buttonEl.addEventListener('click', addGoal);
 
 new Vue({
-  el: '#app',
+  el: "#app",
   data() {
     return {
       goals: [],
-      enteredValue: ''
+      enteredValue: "",
     };
   },
   methods: {
     addGoal() {
       this.goals.push(this.enteredValue);
-      this.enteredValue = '';
-    }
-  }
+      this.enteredValue = "";
+    },
+  },
 });
