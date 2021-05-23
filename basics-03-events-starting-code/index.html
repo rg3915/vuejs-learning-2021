@@ -30,7 +30,7 @@
       />
       <input type="text" v-model="firstName" />
       <button @click="resetInput">Reset Input</button>
-      <p>Your Name: {{ outputFullname() }}</p>
+      <p>Your Name: {{ fullname }}</p>
       <p>Your Name: {{ confirmedName }}</p>
       <p>Your Name: {{ firstName }}</p>
       <form @submit.prevent="submitForm">
