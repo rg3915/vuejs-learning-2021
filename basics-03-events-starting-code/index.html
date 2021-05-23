@@ -21,6 +21,8 @@
       <button @click="add(5)">Add 5</button>
       <button @click="reduce(5)">Reduce 5</button>
       <p>Result: {{ counter }}</p>
+      <input type="text" @input="setName($event, 'Donald')" />
+      <p>Your Name: {{ name }}</p>
     </section>
   </body>
 </html>
