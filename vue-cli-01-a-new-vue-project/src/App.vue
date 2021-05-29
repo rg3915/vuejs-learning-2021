@@ -2,7 +2,11 @@
   <section>
     <header><h1>My Friends</h1></header>
     <ul>
-      <friend-contact />
+      <friend-contact
+        name="Manuel Lorenz"
+        phone-number="980401553"
+        email-address="manuel@localhost.com"
+      />
     </ul>
   </section>
 </template>
