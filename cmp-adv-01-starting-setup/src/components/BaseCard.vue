@@ -14,6 +14,12 @@ export default {
 </script>
 
 <style scoped>
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 div {
   margin: 2rem auto;
   max-width: 30rem;
