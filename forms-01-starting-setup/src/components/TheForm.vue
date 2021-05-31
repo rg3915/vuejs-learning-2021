@@ -61,7 +61,7 @@ export default {
   },
   methods: {
     submitForm() {
-    this.userName=''
+    this.userName='t'
     }
   }
 };
