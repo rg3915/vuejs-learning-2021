@@ -1,5 +1,5 @@
 <template>
-  <form>
+  <form @submit.prevent="submitForm">
     <div class="form-control">
       <label for="user-name">Your Name</label>
       <input id="user-name" name="user-name" type="text" />
@@ -51,6 +51,16 @@
     </div>
   </form>
 </template>
+
+<script>
+export default {
+  methods: {
+    submitForm() {
+      console.log('teste');
+    }
+  }
+};
+</script>
 
 <style scoped>
 form {
