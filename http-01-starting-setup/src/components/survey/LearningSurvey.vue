@@ -50,6 +50,8 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   data() {
     return {
@@ -74,15 +76,9 @@ export default {
 
       const baseUrl = process.env.VUE_APP_FIREBASE_URL;
 
-      fetch(baseUrl + '/surveys.json', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          name: this.enteredName,
-          rating: this.chosenRating
-        })
+      axios.post(baseUrl + '/surveys.json', {
+        name: this.enteredName,
+        rating: this.chosenRating
       });
 
       this.enteredName = '';
