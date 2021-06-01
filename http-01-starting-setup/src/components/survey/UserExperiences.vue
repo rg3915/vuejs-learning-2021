@@ -7,7 +7,8 @@
           >Load Submitted Experiences</base-button
         >
       </div>
-      <ul>
+      <p v-if="isLoading">Loading...</p>
+      <ul v-else>
         <survey-result
           v-for="result in results"
           :key="result.id"
@@ -29,7 +30,8 @@ export default {
   },
   data() {
     return {
-      results: []
+      results: [],
+      isLoading: false
     };
   },
   mounted() {
@@ -37,9 +39,12 @@ export default {
   },
   methods: {
     loadExperiences() {
+      this.isLoading = true;
+
       const baseUrl = process.env.VUE_APP_FIREBASE_URL;
 
       axios.get(baseUrl + '/surveys.json').then(response => {
+        this.isLoading = false;
         const results = [];
         for (const id in response.data) {
           results.push({
