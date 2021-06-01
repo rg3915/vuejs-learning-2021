@@ -32,6 +32,9 @@ export default {
       results: []
     };
   },
+  mounted() {
+    this.loadExperiences();
+  },
   methods: {
     loadExperiences() {
       const baseUrl = process.env.VUE_APP_FIREBASE_URL;
